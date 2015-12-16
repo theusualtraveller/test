@@ -1,13 +1,19 @@
 <!doctype html>
-<html ng-app="app">
+<html ng-app="app" lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Angular Test Page</title>
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
-        <h1 ng-controller="HelloWorldController">{{message}}</h1>
+    <body ng-controller="HelloWorldController">
+        <h1>{{message}}</h1>
+
+        <label for="name">What's your name?</label>
+        <input id="name" ng-model="name" placeholder="...your name here..."/>
+
+        <h2>Hello, {{name}}</h2>
+
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
         <script src="js/HelloWorldController.js"></script>
     </body>
-
 </html>
